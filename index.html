@@ -354,12 +354,12 @@
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(showPosition);
 		} else { 
-			tempatAkad.value = "Geolocation is not supported by this browser.";
+			tempatAkad.innerText = "Geolocation is not supported by this browser.";
 		}
 	}
 	
 	function showPosition(position) {
-		tempatAkad.value = position.coords.latitude + ", " + position.coords.longitude;
+		tempatAkad.innerText = position.coords.latitude + ", " + position.coords.longitude;
 	}
 
 	$(function() {

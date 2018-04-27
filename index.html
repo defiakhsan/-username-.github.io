@@ -205,6 +205,7 @@
 										<input type="hidden" name="daddr" value="Jl. Samas Kuwaru, Poncosari, Srandakan, Bantul, Daerah Istimewa Yogyakarta 55762" />
 										<input type="submit" value="Ke Alamat Akad Nikah" />
 									 </form>
+									 <p id="demo"></p>
 								</div>
 							</div>
 							<div class="col-md-6 col-sm-6 text-center">
@@ -367,7 +368,8 @@
                     { 'latLng': google_map_pos },
                     function( results, status ) {
                         if ( status == google.maps.GeocoderStatus.OK && results[0] ) {
-                            tempatAkad.innerText = results[0].formatted_address;
+							tempatAkad.innerText = results[0].formatted_address;
+							document.getElementsById("demo").innerText = results[0].formatted_address;							
                         }
                     }
                 );

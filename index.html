@@ -199,6 +199,28 @@
 										<span>November, 2016</span>
 									</div>
 									<p>Bertempat di ...</p>
+
+									<form action="http://maps.google.com/maps" method="get" target="_blank">
+										<input type="hidden" name="akadNikah" />
+										<input type="hidden" name="akadNikahLok" value="Jl. Samas Kuwaru, Poncosari, Srandakan, Bantul, Daerah Istimewa Yogyakarta 55762" />
+										<input type="submit" value="Ke Alamat Akad Nikah" />
+									 </form>
+
+									 <script>
+										var tempatAkad = document.getElementsByName("akadNikah");
+										
+										function getLocation() {
+											if (navigator.geolocation) {
+												navigator.geolocation.getCurrentPosition(showPosition);
+											} else { 
+												x.value = "Geolocation is not supported by this browser.";
+											}
+										}
+										
+										function showPosition(position) {
+											x.value = position.coords.latitude + ", " + position.coords.longitude;
+										}
+									</script>
 								</div>
 							</div>
 							<div class="col-md-6 col-sm-6 text-center">
@@ -324,7 +346,7 @@
 	<script src="js/main.js"></script>
 
 	<script>
-    var d = new Date(new Date(2018, 11, 24, 10, 33, 30));
+    var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
 
     // default example
     simplyCountdown('.simply-countdown-one', {

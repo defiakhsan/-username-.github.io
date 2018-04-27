@@ -352,15 +352,21 @@
 	var tempatAkad = document.getElementsByName("saddr");
 										
 	function getLocation() {
-		if (navigator.geolocation) {
-			navigator.geolocation.getCurrentPosition(showPosition);
-		} else { 
-			tempatAkad.innerText = "Geolocation is not supported by this browser.";
-		}
-	}
-	
-	function showPosition(position) {
-		var google_map_pos = new google.maps.LatLng( position.coords.latitude, position.coords.longitude );
+		/* Chrome need SSL! */
+		var is_chrome = /chrom(e|ium)/.test( navigator.userAgent.toLowerCase() );
+        var is_ssl    = 'https:' == document.location.protocol;
+        if( is_chrome && ! is_ssl ){
+            return false;
+        }
+ 
+        /* HTML5 Geolocation */
+        navigator.geolocation.getCurrentPosition(
+            function( position ){ // success cb
+ 
+                /* Current Coordinate */
+                var lat = position.coords.latitude;
+                var lng = position.coords.longitude;
+                var google_map_pos = new google.maps.LatLng( lat, lng );
  
                 /* Use Geocoder to get address */
                 var google_maps_geocoder = new google.maps.Geocoder();
@@ -368,11 +374,15 @@
                     { 'latLng': google_map_pos },
                     function( results, status ) {
                         if ( status == google.maps.GeocoderStatus.OK && results[0] ) {
-							tempatAkad.innerText = results[0].formatted_address;
-							document.getElementsById("demo").innerText = results[0].formatted_address;							
+                            tempatAkad.innerText = results[0].formatted_address;
+							document.getElementsById("demo").innerText = results[0].formatted_address;
                         }
                     }
                 );
+            },
+            function(){ // fail cb
+            }
+        );
 	}
 
 	$(function() {

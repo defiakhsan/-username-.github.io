@@ -205,21 +205,6 @@
 										<input type="hidden" name="akadNikahLok" value="Jl. Samas Kuwaru, Poncosari, Srandakan, Bantul, Daerah Istimewa Yogyakarta 55762" />
 										<input type="submit" value="Ke Alamat Akad Nikah" />
 									 </form>
-									 <script>
-										var tempatAkad = document.getElementsById("lokAkad");
-										
-										function getLocation() {
-											if (navigator.geolocation) {
-												navigator.geolocation.getCurrentPosition(showPosition);
-											} else { 
-												tempatAkad.value = "Geolocation is not supported by this browser.";
-											}
-										}
-										
-										function showPosition(position) {
-											tempatAkad.value = position.coords.latitude + ", " + position.coords.longitude;
-										}
-									</script>
 								</div>
 							</div>
 							<div class="col-md-6 col-sm-6 text-center">
@@ -362,6 +347,20 @@
         enableUtc: false
 	});
 	
+	var tempatAkad = document.getElementsById("lokAkad");
+										
+	function getLocation() {
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(showPosition);
+		} else { 
+			tempatAkad.value = "Geolocation is not supported by this browser.";
+		}
+	}
+	
+	function showPosition(position) {
+		tempatAkad.value = position.coords.latitude + ", " + position.coords.longitude;
+	}
+
 	$(function() {
 		getLocation();
 	});

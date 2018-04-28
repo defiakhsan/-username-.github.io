@@ -346,10 +346,11 @@
 			form.addEventListener('submit', e => {
 				e.preventDefault()
 				fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-				.then(response => console.log('Success!', response),
-					document.getElementById("pesan").innerHTML = "Terimakasih, data sudah tersimpan. Kami tunggu kehadiran Anda." )
-				.catch(error => console.error('Error!', error.message),
-					document.getElementById("pesan").innerHTML = "Maaf, data tidak tersimpan. Sedang Maintenence!")
+				.then(response => console.log('Success!', response))
+				.catch(error => console.error('Error!', error.message))
+
+				
+				document.getElementById("pesan").innerHTML = response.message;
 			})
 		}
 
@@ -358,18 +359,21 @@
 			var timestamp = document.getElementById("Timestamp");
 			var today = new Date();
 			var dd = today.getDate();
-			var mm = today.getMonth()+1; //January is 0!
+			var m = today.getMonth()+1; //January is 0!
 			var yyyy = today.getFullYear();
+			var HH = today.getHours();
+			var mm = today.getMinutes();
+			var ss = today.getSeconds();
 
 			if(dd<10) {
 				dd = '0'+dd
 			} 
 
-			if(mm<10) {
-				mm = '0'+mm
+			if(m<10) {
+				m = '0'+m
 			} 
 
-			today = mm + '/' + dd + '/' + yyyy;
+			today = dd + '-' + m + '-' + yyyy+ ' ' + HH+ ':' + mm+ ':' + ss;
 			timestamp.value = today;
 		}
 	</script>

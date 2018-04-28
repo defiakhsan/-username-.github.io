@@ -294,10 +294,10 @@
 								</div>
 							</div>
 							<div class="col-md-4 col-sm-4">
-								<input type="hidden" name="Timestamp" id="Timestamp"/>
-								<label type="text" id="pesan"/>
+								<input type="hidden" name="Timestamp" id="Timestamp"/>								
 								<button type="submit" name="submit">Konfirmasi Kehadiran</button>
 							</div>
+							<label type="text" id="pesan"/>
 						</form>
 					</div>
 				</div>
@@ -346,11 +346,10 @@
 			form.addEventListener('submit', e => {
 				e.preventDefault()
 				fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-				.then(response => console.log('Success!', response))
+				.then(response => 
+					document.getElementById("pesan").innerHTML = "Terimakasih, data sudah tersimpan."
+				)
 				.catch(error => console.error('Error!', error.message))
-
-				
-				document.getElementById("pesan").innerHTML = response.message;
 			})
 		}
 

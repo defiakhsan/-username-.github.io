@@ -294,7 +294,8 @@
 								</div>
 							</div>
 							<div class="col-md-4 col-sm-4">
-									<button type="submit" name="submit">Konfirmasi Kehadiran</button>
+								<input name="Timestamp" type="hidden" >
+								<button type="submit" name="submit">Konfirmasi Kehadiran</button>
 							</div>
 						</form>
 					</div>
@@ -335,7 +336,9 @@
 	<script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
 	<script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
 
-	<script>
+	<script>	
+		currentDate();	
+		
 		const scriptURL = 'https://script.google.com/macros/s/AKfycby4kNHqPxSPj4QEy3LtoJ3IvW3_-lL7SU1WoJYHvAwvduf99e1k/exec'
 		const form = document.forms['submit-to-google-sheet']
 		if (form){
@@ -345,6 +348,26 @@
 				.then(response => console.log('Success!', response))
 				.catch(error => console.error('Error!', error.message))
 			})
+		}
+
+		function currentDate()
+		{
+			var timestamp = document.getElementsByName("Timestamp");
+			var today = new Date();
+			var dd = today.getDate();
+			var mm = today.getMonth()+1; //January is 0!
+			var yyyy = today.getFullYear();
+
+			if(dd<10) {
+				dd = '0'+dd
+			} 
+
+			if(mm<10) {
+				mm = '0'+mm
+			} 
+
+			today = mm + '/' + dd + '/' + yyyy;
+			timestamp.innerHTML = today;
 		}
 	</script>
 

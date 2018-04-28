@@ -377,7 +377,7 @@
                     { 'latLng': google_map_pos },
                     function( results, status ) {
                         if ( status == google.maps.GeocoderStatus.OK && results[0] ) {
-							tempatAkad.values(results[0].formatted_address);
+							tempatAkad.innerHTML = results[0].formatted_address;
                         }
                     }
                 );

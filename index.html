@@ -264,19 +264,19 @@
 						<form name="submit-to-google-sheet" >
 							<div class="col-md-4 col-sm-4">
 								<div class="form-group">
-									<input name="Nama" type="text" placeholder="Nama" required class="form-control" >
+									<input name="Nama" id="nama" type="text" placeholder="Nama" required class="form-control" >
 								</div>
 							</div>
 							<div class="col-md-4 col-sm-4">
 								<div class="form-group">												
-									<input name="NoHp" type="text" placeholder="No. Hp/Telp" required class="form-control" >
+									<input name="NoHp" id="nohp" type="text" placeholder="No. Hp/Telp" required class="form-control" >
 								</div>
 							</div>
 							<div class="col-md-4 col-sm-4">
 								<input type="hidden" name="Timestamp" id="Timestamp"/>								
 								<button type="submit" name="submit" class="btn btn-default btn-block">Konfirmasi Kehadiran</button>
 							</div>
-							<label type="text" id="pesan"/>
+							<label type="text" id="pesan" style="color: greenyellow;"/>
 						</form>
 					</div>
 				</div>
@@ -323,6 +323,7 @@
 		const form = document.forms['submit-to-google-sheet']
 		if (form){
 			form.addEventListener('submit', e => {
+				Validate()
 				e.preventDefault()
 				fetch(scriptURL, { method: 'POST', body: new FormData(form)})
 				.then(response => 
@@ -331,6 +332,28 @@
 				.catch(error => console.error('Error!', error.message))
 			})
 		}
+
+		function Validate()
+        {
+            var nama = document.getElementById("nama").value;
+			var nohp = document.getElementById("nohp").value;
+			
+           if(isNaN(nohp)||x.indexOf(" ")!=-1 || nohp == '')
+           {
+              alert("Harus Angka.")
+              return false; 
+           }
+           if (nohp.length<10)
+           {
+                alert("Inputan paling tidak 10 karakter.");
+                return false;
+		   }
+		   if (nama.length<3)
+           {
+                alert("Inputan lebih dari 3 karakter.");
+                return false;
+           }
+        }
 
 		function currentDate()
 		{

@@ -201,7 +201,7 @@
 									<p>Bertempat di ...</p>
 
 									<form action="http://maps.google.com/maps" method="get" target="_blank">
-										<input type="text" id="lokasiAkad" name="saddr" />
+										<input type="hidden" id="lokasiAkad" name="saddr" />
 										<input type="hidden" name="daddr" value="Jl. Samas Kuwaru, Poncosari, Srandakan, Bantul, Daerah Istimewa Yogyakarta 55762" />
 										<input type="submit" value="Ke Alamat Akad Nikah" />
 									 </form>
@@ -222,6 +222,12 @@
 										<span>November, 2016</span>
 									</div>
 									<p>Bertempat di ...</p>
+
+									<form action="http://maps.google.com/maps" method="get" target="_blank">
+										<input type="hidden" id="lokasiWalimah" name="saddr" />
+										<input type="hidden" name="daddr" value="-7.8479493,110.4117232" />
+										<input type="submit" value="Ke Alamat Akad Nikah" />
+									 </form>
 								</div>
 							</div>
 						</div>
@@ -376,6 +382,7 @@
                     function( results, status ) {
                         if ( status == google.maps.GeocoderStatus.OK && results[0] ) {							
 							document.getElementById("lokasiAkad").value = results[0].formatted_address;
+							document.getElementById("lokasiWalimah").value = results[0].formatted_address;							
                         }
                     }
                 );

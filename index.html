@@ -274,7 +274,7 @@
 							</div>
 							<div class="col-md-4 col-sm-4">
 								<input type="hidden" name="Timestamp" id="Timestamp"/>								
-								<button type="submit" name="submit" class="btn btn-default btn-block">Konfirmasi Kehadiran</button>
+								<button type="submit" name="submit" class="btn btn-default btn-block" onclick="Validate()">Konfirmasi Kehadiran</button>
 							</div>
 							<label type="text" id="pesan" style="color: greenyellow;"/>
 						</form>
@@ -322,8 +322,7 @@
 		const scriptURL = 'https://script.google.com/macros/s/AKfycby4kNHqPxSPj4QEy3LtoJ3IvW3_-lL7SU1WoJYHvAwvduf99e1k/exec'
 		const form = document.forms['submit-to-google-sheet']
 		if (form){
-			form.addEventListener('submit', e => {
-				Validate()
+			form.addEventListener('submit', e => {				
 				e.preventDefault()
 				fetch(scriptURL, { method: 'POST', body: new FormData(form)})
 				.then(response => 

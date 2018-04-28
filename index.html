@@ -284,25 +284,19 @@
 					<div class="col-md-10 col-md-offset-1">
 						<form class="form-inline">
 								<div id="form-container" class="ss-form-container">
-										<form action="https://docs.google.com/forms/d/e/1FAIpQLSe1djkt9yVyTrthCEjNbTtkobfz-86ggnTHLZd1ZwAw_XqgnQ/formResponse" target="_self" method="POST" id="mG61Hd">
+										<form name="submit-to-google-sheet">
 										<div class="col-md-4 col-sm-4">
 											<div class="form-group">
-												<input type="text" class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-label="Nama" aria-describedby="i.desc.49479640 i.err.49479640" name="entry.1253316644" value="" required="" dir="auto" data-initial-dir="auto" data-initial-value="">
-												<div jsname="LwH6nd" class="quantumWizTextinputPaperinputPlaceholder exportLabel">Nama</div>
+												<input name="nama" type="text" placeholder="Nama" required>
 											</div>
 										</div>
 										<div class="col-md-4 col-sm-4">
 											<div class="form-group">												
-												<input type="text" class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-label="No. Hp / Telp" aria-describedby="i.desc.1853385606 i.err.1853385606" name="entry.1661232375" value="" required="" dir="auto" data-initial-dir="auto" data-initial-value="">
-												<div jsname="LwH6nd" class="quantumWizTextinputPaperinputPlaceholder exportLabel">No. Hp/Telp</div>
+												<input name="nomor" type="text" placeholder="No. Hp/Telp" required>
 											</div>
 										</div>
 										<div class="col-md-4 col-sm-4">
-												<input type="hidden" name="fvv" value="1">
-												<input type="hidden" name="draftResponse" value="[null,null,&quot;4833760194339985798&quot;]">
-												<input type="hidden" name="pageHistory" value="0">
-												<input type="hidden" name="fbzx" value="4833760194339985798">
-												<input name="submit" type="submit" value="Konfirmasi Kehadiran">	
+												<button type="submit">Konfirmasi Kehadiran</button>
 										</div>
 									</form>
 								</div>							
@@ -340,6 +334,17 @@
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
 	
+	<script>
+		const scriptURL = 'https://docs.google.com/forms/d/e/1FAIpQLSe1djkt9yVyTrthCEjNbTtkobfz-86ggnTHLZd1ZwAw_XqgnQ/formResponse'
+		const form = document.forms['submit-to-google-sheet']
+		form.addEventListener('submit', e => {
+			e.preventDefault()
+			fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+			.then(response => console.log('Success!', response))
+			.catch(error => console.error('Error!', error.message))
+		})
+	</script>
+
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->

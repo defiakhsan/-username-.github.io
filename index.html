@@ -294,7 +294,8 @@
 								</div>
 							</div>
 							<div class="col-md-4 col-sm-4">
-								<label name="Timestamp" type="hidden" ></label>
+								<input type="hidden" name="Timestamp" id="Timestamp"/>
+								<label type="text" id="pesan"/>
 								<button type="submit" name="submit">Konfirmasi Kehadiran</button>
 							</div>
 						</form>
@@ -345,14 +346,16 @@
 			form.addEventListener('submit', e => {
 				e.preventDefault()
 				fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-				.then(response => console.log('Success!', response))
-				.catch(error => console.error('Error!', error.message))
+				.then(response => console.log('Success!', response),
+					document.getElementById("pesan").innerHTML = "Terimakasih, data sudah tersimpan. Kami tunggu kehadiran Anda." )
+				.catch(error => console.error('Error!', error.message),
+					document.getElementById("pesan").innerHTML = "Maaf, data tidak tersimpan. Sedang Maintenence!")
 			})
 		}
 
 		function currentDate()
 		{
-			var timestamp = document.getElementsByName("Timestamp");
+			var timestamp = document.getElementById("Timestamp");
 			var today = new Date();
 			var dd = today.getDate();
 			var mm = today.getMonth()+1; //January is 0!

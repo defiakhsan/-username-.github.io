@@ -202,7 +202,7 @@
 
 									<form action="http://maps.google.com/maps" method="get" target="_blank">
 										<input type="hidden" id="lokasiAkad" name="saddr" />
-										<input type="hidden" name="daddr" value="Jl. Samas Kuwaru, Poncosari, Srandakan, Bantul, Daerah Istimewa Yogyakarta 55762" />
+										<input type="hidden" name="daddr" value="-7.974369, 110.236499" />
 										<input type="submit" value="Ke Alamat Akad Nikah" />
 									 </form>
 								</div>
@@ -277,6 +277,7 @@
 								<button type="submit" name="submit" class="btn btn-default btn-block" onclick="Validate()">Konfirmasi Kehadiran</button>
 							</div>
 							<label type="text" id="pesan" style="color: greenyellow;"/>
+							<label type="text" id="msgerr" style="color: red;"/>
 						</form>
 					</div>
 				</div>
@@ -337,19 +338,19 @@
             var nama = document.getElementById("nama").value;
 			var nohp = document.getElementById("nohp").value;
 			
-           if(isNaN(nohp)||x.indexOf(" ")!=-1 || nohp == '')
+           if(isNaN(nohp)||nohp.indexOf(" ")!=-1 || nohp == '')
            {
-              alert("Harus Angka.")
+			  document.getElementById("msgerr").innerHTML = "No Hp/Telp Harus Angka."
               return false; 
            }
-           if (nohp.length<10)
+           if (nohp.length<6)
            {
-                alert("Inputan paling tidak 10 karakter.");
+				document.getElementById("msgerr").innerHTML = "No Hp/Telp paling tidak 6 karakter."
                 return false;
 		   }
 		   if (nama.length<3)
            {
-                alert("Inputan lebih dari 3 karakter.");
+				document.getElementById("msgerr").innerHTML = "Nama harus lebih dari 3 karakter."
                 return false;
            }
         }

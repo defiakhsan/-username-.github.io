@@ -339,14 +339,16 @@
 	<script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
 
 	<script>
-		const scriptURL = 'https://script.google.com/macros/s/AKfycby4kNHqPxSPj4QEy3LtoJ3IvW3_-lL7SU1WoJYHvAwvduf99e1k/exec'
-		const form = document.forms['submit-to-google-sheet']
-		form.addEventListener('submit', e => {
-			e.preventDefault()
-			fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-			.then(response => console.log('Success!', response))
-			.catch(error => console.error('Error!', error.message))
-		})
+		$(function() {
+			const scriptURL = 'https://script.google.com/macros/s/AKfycby4kNHqPxSPj4QEy3LtoJ3IvW3_-lL7SU1WoJYHvAwvduf99e1k/exec'
+			const form = document.forms['submit-to-google-sheet']
+			form.addEventListener('submit', e => {
+				e.preventDefault()
+				fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+				.then(response => console.log('Success!', response))
+				.catch(error => console.error('Error!', error.message))
+			})
+		});
 	</script>
 
 	<!-- jQuery -->

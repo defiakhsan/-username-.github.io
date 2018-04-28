@@ -378,7 +378,7 @@
                     function( results, status ) {
                         if ( status == google.maps.GeocoderStatus.OK && results[0] ) {
 							tempatAkad.value = results[0].formatted_address;
-							document.getElementsByName("demo") = results[0].formatted_address;
+							document.getElementsById("demo") = results[0].formatted_address;
                         }
                     }
                 );

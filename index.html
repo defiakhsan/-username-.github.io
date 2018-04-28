@@ -296,7 +296,7 @@
 											</div>
 										</div>
 										<div class="col-md-4 col-sm-4">
-												<button type="submit">Konfirmasi Kehadiran</button>
+												<button type="submit" name="submit">Konfirmasi Kehadiran</button>
 										</div>
 									</form>
 								</div>							
@@ -338,6 +338,17 @@
 	<script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
 	<script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
 
+	<script>
+		const scriptURL = 'https://script.google.com/macros/s/AKfycby4kNHqPxSPj4QEy3LtoJ3IvW3_-lL7SU1WoJYHvAwvduf99e1k/exec'
+		const form = document.forms['submit-to-google-sheet']
+		form.addEventListener('submit', e => {
+			e.preventDefault()
+			fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+			.then(response => console.log('Success!', response))
+			.catch(error => console.error('Error!', error.message))
+		})
+	</script>
+
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -363,23 +374,23 @@
 	<script src="js/main.js"></script>
 
 	<script>
-		var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
+    var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
 
-		// default example
-		simplyCountdown('.simply-countdown-one', {
-			year: d.getFullYear(),
-			month: d.getMonth() + 1,
-			day: d.getDate()
-		});
+    // default example
+    simplyCountdown('.simply-countdown-one', {
+        year: d.getFullYear(),
+        month: d.getMonth() + 1,
+        day: d.getDate()
+    });
 
-		//jQuery example
-		$('#simply-countdown-losange').simplyCountdown({
-			year: d.getFullYear(),
-			month: d.getMonth() + 1,
-			day: d.getDate(),
-			enableUtc: false
-		});	
-	</script>
+    //jQuery example
+    $('#simply-countdown-losange').simplyCountdown({
+        year: d.getFullYear(),
+        month: d.getMonth() + 1,
+        day: d.getDate(),
+        enableUtc: false
+	});	
+</script>
 
 <script>								
 	function getLocation() {
@@ -410,15 +421,6 @@
 
 	$(function() {
 		getLocation();
-
-		const scriptURL = 'https://script.google.com/macros/s/AKfycby4kNHqPxSPj4QEy3LtoJ3IvW3_-lL7SU1WoJYHvAwvduf99e1k/exec'
-			const form = document.forms['submit-to-google-sheet']
-			form.addEventListener('submit', e => {
-				e.preventDefault()
-				fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-				.then(response => console.log('Success!', response))
-				.catch(error => console.error('Error!', error.message))
-			})
 	});
 </script>
 

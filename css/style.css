@@ -70,15 +70,14 @@ p {
   margin-bottom: 20px;
 }
 
-h1, h2, h3, h4, h5, h6, figure {
+/* h1, h2, h3, h4, h5, h6, figure {
   color: #000;
   font-family: "Work Sans", Arial, sans-serif;
   font-weight: 400;
   margin: 0 0 20px 0;
-}
+} */
 
 span {
-  color: rgb(230, 11, 11);
   font-family: "Allema";
   font-weight: 400;
   margin: 0 0 20px 0;
@@ -806,7 +805,7 @@ span {
   position: absolute;
   left: 0;
   top: .05em;
-  font-family: 'icomoon';
+  font-family: 'Allema';
   speak: none;
   font-style: normal;
   font-weight: normal;

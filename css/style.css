@@ -6,6 +6,10 @@
   font-style: normal;
 }
 @font-face {
+  font-family: "Allema";
+  src: url("../fonts/Allema Free Demo.otf") format("embedded-opentype")
+  }
+@font-face {
   font-family: "Adine";
   src: url("../fonts/Adine Kirnberg.ttf") format("truetype")
   }
@@ -75,7 +79,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 span {
   color: rgb(230, 11, 11);
-  font-family: "Adine";
+  font-family: "Allema";
   font-weight: 400;
   margin: 0 0 20px 0;
 }

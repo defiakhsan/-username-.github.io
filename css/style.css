@@ -7,7 +7,7 @@
 }
 @font-face {
   font-family: "Adine";
-  src: url("../fonts/Adine Kirnberg.ttf");
+  src: url("../fonts/Adine Kirnberg.ttf") format("truetype")
   }
 /* =======================================================
 *

@@ -5,6 +5,10 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Adine Kirnberg";
+  src: url("../fonts/Adine Kirnberg.eot");
+  }
 /* =======================================================
 *
 * 	Template Style 
@@ -71,7 +75,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 span {
   color: rgb(230, 11, 11);
-  font-family: "Work Sans", Arial, sans-serif;
+  font-family: "Adine Kirnberg";
   font-weight: 400;
   margin: 0 0 20px 0;
 }

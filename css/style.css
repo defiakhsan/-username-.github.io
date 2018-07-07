@@ -7,7 +7,7 @@
 }
 @font-face {
   font-family: "Allema";
-  src: url("../fonts/Allema Free Demo.otf") format("embedded-opentype")
+  src: url("../fonts/Allema Free Demo.ttf") format("truetype")
   }
 @font-face {
   font-family: "Adine";

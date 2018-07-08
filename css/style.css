@@ -71,14 +71,14 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6, figure {
-  color:rgba(60, 156, 73, 0.8);
+  color:rgba(60, 192, 78, 0.8);
   font-family: "Work Sans", Arial, sans-serif;
   font-weight: 400;
   margin: 0 0 20px 0;
 }
 
 span {
-  color: rgba(60, 156, 73, 0.8);
+  color: #CDDAE2;
   font-family: "Allema";
   font-weight: 400;
   margin: 0 0 20px 0;

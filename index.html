@@ -82,7 +82,9 @@
 						Your browser does not support the audio element.
 					</audio>
 				</div>
-				<button onclick="hideAudio()">Hide</button>
+				<div class="col-xm-2 text-right">
+					<button onclick="hideAudio()">Hide</button>
+				</div>				
 			</div>
 			
 		</div>
@@ -469,8 +471,10 @@
 		var x = document.getElementById("myAudio");
 		if (x.style.display === "none") {
 			x.style.display = "block";
+			x.innerHTML = "Hide";
 		} else {
 			x.style.display = "none";
+			x.innerHTML = "Show";
 		}
 	}
 </script>

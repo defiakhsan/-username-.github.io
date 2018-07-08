@@ -1386,16 +1386,7 @@ form label {
   padding-left: 50px;
   padding-right: 50px;
 }
-#myBtnAudio #btnAlamat {
-  height: 35px;
-  border: none !important;
-  background: rgba(60, 156, 73, 0.8);
-  color: #fff;
-  font-size: 14px;
-  font-weight: 400;
-  padding-left: 10px;
-  padding-right: 10px;
-}
+
 #fh5co-started .form-inline .form-group {
   width: 100% !important;
   margin-bottom: 10px;

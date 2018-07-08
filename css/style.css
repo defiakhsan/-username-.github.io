@@ -1386,7 +1386,7 @@ form label {
   padding-left: 50px;
   padding-right: 50px;
 }
-.btnOK {
+#myBtnAudio #btnAlamat {
   height: 35px;
   border: none !important;
   background: rgba(60, 156, 73, 0.8);

@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 span {
-  color: rgb(56, 61, 65);
+  color: rgb(219, 208, 46);
   font-family: "Allema";
   font-weight: 400;
   margin: 0 0 20px 0;
@@ -946,8 +946,8 @@ form label {
 .simply-countdown > .simply-section {
   /* coutndown blocks */
   display: inline-block;
-  width: 75px;
-  height: 75px;
+  width: 70px;
+  height: 70px;
   background: rgba(60, 156, 73, 0.8);
   margin: 0 4px;
   -webkit-border-radius: 30%;
@@ -973,8 +973,8 @@ form label {
   /* countdown block inner div */
   display: table-cell;
   vertical-align: middle;
-  height: 75px;
-  width: 75px;
+  height: 50px;
+  width: 50px;
 }
 
 .simply-countdown > .simply-section .simply-amount,

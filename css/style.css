@@ -23,7 +23,7 @@
 body {
   font-family: "Work Sans", Arial, sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   line-height: 1.7;
   color: #828282;
   background: #fff;
@@ -41,22 +41,8 @@ body {
 
 .responsive {
   width: 100%;
-  max-width: 300px;
+  max-width: 280px;
   height: auto;
-}
-
-div {
-  font-size: 16px;
-}
-@media screen and (min-width: 320px) {
-  div {
-    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
-  }
-}
-@media screen and (min-width: 1000px) {
-  div {
-    font-size: 22px;
-  }
 }
 
 .offcanvas #page {

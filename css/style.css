@@ -36,6 +36,13 @@ body {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
+
+.responsive {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+}
+
 .offcanvas #page {
   overflow: hidden;
   position: absolute;

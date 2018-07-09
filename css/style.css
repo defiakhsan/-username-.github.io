@@ -121,7 +121,6 @@ span {
   .fh5co-nav {
     padding: 20px 0;
   }
-  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 .fh5co-nav #fh5co-logo {
   font-size: 40px;

@@ -9,6 +9,8 @@
   font-family: "Allema";
   src: url("../fonts/Allema Free Demo.ttf") format("truetype")
   }
+
+  
 /* @font-face {
   font-family: "Adine";
   src: url("../fonts/Adine Kirnberg.ttf") format("truetype")
@@ -41,6 +43,12 @@ body {
   width: 100%;
   max-width: 320px;
   height: auto;
+}
+
+@media screen and (min-width: 1200px) {
+  div {
+     font-size: 36px;
+  }
 }
 
 .offcanvas #page {

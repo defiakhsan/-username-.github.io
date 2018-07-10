@@ -353,14 +353,14 @@ span {
 }
 .fh5co-cover .display-t,
 .fh5co-cover .display-tc {
-  height: 900px;
+  height: auto;
   display: table;
   width: 100%;
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover .display-t,
   .fh5co-cover .display-tc {
-    height: 600px;
+    height: auto;
   }
 }
 .fh5co-cover.fh5co-cover-sm {
@@ -373,14 +373,14 @@ span {
 }
 .fh5co-cover.fh5co-cover-sm .display-t,
 .fh5co-cover.fh5co-cover-sm .display-tc {
-  height: 600px;
+  height: auto;
   display: table;
   width: 100%;
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover.fh5co-cover-sm .display-t,
   .fh5co-cover.fh5co-cover-sm .display-tc {
-    height: 400px;
+    height: auto;
   }
 }
 
@@ -393,7 +393,7 @@ span {
 #fh5co-counter .display-tc,
 #fh5co-event .display-t,
 #fh5co-event .display-tc {
-  height: 700px;
+  height: auto;
   display: table;
   width: 100%;
 }

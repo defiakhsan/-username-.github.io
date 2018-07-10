@@ -994,13 +994,13 @@ form label {
 }
 
 .simply-countdown > .simply-section .simply-amount {
-  font-size: 20px;
+  font-size: 0.8em;
   /* amounts */
 }
 
 .simply-countdown > .simply-section .simply-word {
   color: white;
-  font-size: 14px;
+  font-size: 0.5em;
   /* words */
 }
 

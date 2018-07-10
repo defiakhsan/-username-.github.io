@@ -386,7 +386,7 @@ span {
 
 #fh5co-counter,
 #fh5co-event {
-  height: 950px;
+  height: auto;
   float: left;
 }
 #fh5co-counter .display-t,

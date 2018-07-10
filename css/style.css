@@ -1001,13 +1001,13 @@ form label {
 }
 
 .simply-countdown > .simply-section .simply-amount {
-  font-size: 1.2em;
+  font-size: 1em;
   /* amounts */
 }
 
 .simply-countdown > .simply-section .simply-word {
   color: white;
-  font-size: 1em;
+  font-size: 0.7em;
   /* words */
 }
 

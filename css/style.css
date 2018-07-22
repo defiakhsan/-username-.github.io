@@ -47,6 +47,15 @@ body {
   max-width: 300px;
 }
 
+#fh5co-header { 
+  background-image: url(images/alina_danf.jpg); 
+}
+@media only screen and (max-width: 320px) {
+  #fh5co-header { 
+      background-image: url(images/alina_danf.jpg); 
+  }
+}
+
 .responsiveMap {
   width: 100%;
 }

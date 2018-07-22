@@ -339,7 +339,7 @@ span {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.3);
 }
 .fh5co-cover > .fh5co-container {
   position: relative;
@@ -347,7 +347,7 @@ span {
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover {
-    height: 600px;
+    height: 500px;
   }
 }
 .fh5co-cover .display-t,
@@ -359,11 +359,11 @@ span {
 @media screen and (max-width: 768px) {
   .fh5co-cover .display-t,
   .fh5co-cover .display-tc {
-    height: 600px;
+    height: 500px;
   }
 }
 .fh5co-cover.fh5co-cover-sm {
-  height: 600px;
+  height: 500px;
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover.fh5co-cover-sm {
@@ -372,7 +372,7 @@ span {
 }
 .fh5co-cover.fh5co-cover-sm .display-t,
 .fh5co-cover.fh5co-cover-sm .display-tc {
-  height: 600px;
+  height: 500px;
   display: table;
   width: 100%;
 }
@@ -468,7 +468,7 @@ span {
 }
 
 #fh5co-counter {
-  height: 600px;
+  height: 500px;
 }
 @media screen and (max-width: 768px) {
   #fh5co-counter {

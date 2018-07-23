@@ -329,8 +329,8 @@ span {
   height: 900px;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-image:url(images/alina_danf.jpg);
   background-size: 70%;
+  background-position: bottom;
   position: relative;
   width: 100%;
 }
@@ -354,7 +354,7 @@ span {
 }
 .fh5co-cover .display-t,
 .fh5co-cover .display-tc {
-  height: 900px;
+  height: 840px;
   display: table;
   width: 100%;
 }

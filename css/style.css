@@ -333,7 +333,6 @@ span {
   background-position: bottom;
   position: relative;
   width: 100%;
-  background-color: papayawhip;
 }
 .fh5co-cover .overlay {
   z-index: 0;
@@ -348,11 +347,11 @@ span {
   position: relative;
   z-index: 10;
 }
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .fh5co-cover {
     height: 500px;
   }
-}
+} */
 .fh5co-cover .display-t,
 .fh5co-cover .display-tc {
   height: 840px;

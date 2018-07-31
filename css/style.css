@@ -93,10 +93,8 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 span {
-  color: #CDDAE2;
   font-family: "Allema";
   font-weight: 400;
-  margin: 0 0 10px 0;
 }
 
 ::-webkit-selection {

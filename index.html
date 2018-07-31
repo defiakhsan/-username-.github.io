@@ -117,7 +117,7 @@
 		</div>
 	</header>
 
-	<div id="fh5co-couple" style="background-color:#5E6572;">
+	<!-- <div id="fh5co-couple" style="background-color:#5E6572;">
 		<div class="container" >
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center animate-box">
@@ -321,7 +321,7 @@
 					</div>
 				</div>
 		</div>
-	</div>
+	</div> -->
 
 	<footer id="fh5co-footer" role="contentinfo">
 		<div class="container">
@@ -344,7 +344,7 @@
 			</div>
 
 		</div>
-	</footer>
+	</footer> 
 	</div>
 
 	<div class="gototop js-top">
@@ -363,7 +363,7 @@
 		(document, 'script', 'facebook-jssdk'));
 	</script>
 
-	<script>	
+	<!-- <script>	
 
 		currentDate();	
 
@@ -381,26 +381,26 @@
 		}
 
 		function Validate()
-        {
-            var nama = document.getElementById("nama").value;
-			var nohp = document.getElementById("nohp").value;
-			
-           if(isNaN(nohp)||nohp.indexOf(" ")!=-1)
-           {
-			  document.getElementById("msgerr").innerHTML = "No Hp/Telp Harus Angka."
-              return false; 
-           }
-           if (nohp.length<6)
-           {
-				document.getElementById("msgerr").innerHTML = "No Hp/Telp paling tidak 6 karakter."
-                return false;
+		{
+		    var nama = document.getElementById("nama").value;
+				var nohp = document.getElementById("nohp").value;
+
+		   if(isNaN(nohp)||nohp.indexOf(" ")!=-1)
+		   {
+				  document.getElementById("msgerr").innerHTML = "No Hp/Telp Harus Angka."
+		      return false; 
 		   }
-		   if (nama.length<3)
-           {
-				document.getElementById("msgerr").innerHTML = "Nama harus lebih dari 3 karakter."
-                return false;
-           }
-        }
+		   if (nohp.length<6)
+		   {
+					document.getElementById("msgerr").innerHTML = "No Hp/Telp paling tidak 6 karakter."
+			return false;
+			   }
+			   if (nama.length<3)
+		   {
+					document.getElementById("msgerr").innerHTML = "Nama harus lebih dari 3 karakter."
+			return false;
+		   }
+		}
 
 		function currentDate()
 		{
@@ -424,7 +424,7 @@
 			today = dd + '-' + m + '-' + yyyy+ ' ' + HH+ ':' + mm+ ':' + ss;
 			timestamp.value = today;
 		}
-	</script>
+	</script> -->
 
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
@@ -451,25 +451,25 @@
 	<script src="js/main.js"></script>
 
 	<script>
-    var d = new Date("2018-10-06");
+	    var d = new Date("2018-10-06");
 
-    // default example
-    simplyCountdown('.simply-countdown-one', {
-        year: d.getFullYear(),
-        month: d.getMonth() + 1,
-        day: d.getDate()
-    });
+	    // default example
+	    simplyCountdown('.simply-countdown-one', {
+		year: d.getFullYear(),
+		month: d.getMonth() + 1,
+		day: d.getDate()
+	    });
 
-    //jQuery example
-    $('#simply-countdown-losange').simplyCountdown({
-        year: d.getFullYear(),
-        month: d.getMonth() + 1,
-        day: d.getDate(),
-        enableUtc: false
-	});	
-</script>
+	    //jQuery example
+	    $('#simply-countdown-losange').simplyCountdown({
+		year: d.getFullYear(),
+		month: d.getMonth() + 1,
+		day: d.getDate(),
+		enableUtc: false
+		});	
+	</script>
 
-<script>								
+<!-- <script>								
 	function getLocation() {
 
 		/* Chrome need SSL! */
@@ -523,7 +523,7 @@
 	if ( size > 13 )
 		$('.features').css('font-size', size + 'px');
 	}
-</script>
+</script> -->
 
 	</body>
 </html>

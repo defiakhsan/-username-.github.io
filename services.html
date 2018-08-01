@@ -330,28 +330,34 @@
 	</script>
 	
 	<script>								
-	function getLocation() {
+	function getLocation() 
+	{
 		/* Chrome need SSL! */
 		var is_chrome = /chrom(e|ium)/.test( navigator.userAgent.toLowerCase() );
-        var is_ssl    = 'https:' == document.location.protocol;
-        if( is_chrome && ! is_ssl ){
-            return false;
-        }
+        	var is_ssl    = 'https:' == document.location.protocol;
+		if( is_chrome && ! is_ssl )
+		{
+		    return false;
+		}
  
-        /* HTML5 Geolocation */
-        navigator.geolocation.getCurrentPosition(
-            function( position ){ // success cb
- 
-                /* Current Coordinate */
-                var lat = position.coords.latitude;
-				var lng = position.coords.longitude;
-				
-				document.getElementById("lokasiAkad").value = lat + ", " + lng;	
-				// document.getElementById("lokasiWalimah").value = lat + ", " + lng;                
-            },
-            function(){ // fail cb
-            }
-        );
+		/* HTML5 Geolocation */
+		if (navigator.geolocation)
+		{
+			navigator.geolocation.getCurrentPosition(
+			    function( position )
+				{ // success cb
+
+					/* Current Coordinate */
+					var lat = position.coords.latitude;
+					var lng = position.coords.longitude;
+
+					document.getElementById("lokasiAkad").value = lat + ", " + lng;	
+					// document.getElementById("lokasiWalimah").value = lat + ", " + lng;                
+				},
+				function(){ // fail cb
+				}
+			);
+		}
 	}
 	
 	$(function() {

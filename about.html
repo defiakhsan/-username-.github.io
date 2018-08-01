@@ -333,6 +333,8 @@
 
 
 	<script>
+	currentDate();
+		
 	const scriptURL = 'https://script.google.com/macros/s/AKfycby4kNHqPxSPj4QEy3LtoJ3IvW3_-lL7SU1WoJYHvAwvduf99e1k/exec'
 	const form = document.forms['submit-to-google-sheet']
 	if (form){
@@ -367,6 +369,26 @@
                 return false;
            }
         }
+		
+	function currentDate()
+	{
+		var timestamp = document.getElementById("Timestamp");
+		var today = new Date();
+		var dd = today.getDate();
+		var m = today.getMonth()+1; //January is 0!
+		var yyyy = today.getFullYear();
+		var HH = today.getHours();
+		var mm = today.getMinutes();
+		var ss = today.getSeconds();
+		if(dd<10) {
+			dd = '0'+dd
+		} 
+		if(m<10) {
+			m = '0'+m
+		} 
+		today = dd + '-' + m + '-' + yyyy+ ' ' + HH+ ':' + mm+ ':' + ss;
+		timestamp.value = today;
+	}
 	</script>
 	</body>
 </html>
